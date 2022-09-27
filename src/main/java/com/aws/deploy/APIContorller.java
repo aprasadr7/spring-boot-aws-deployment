@@ -18,4 +18,10 @@ public class APIContorller {
     {
         return ResponseEntity.ok("Up and Running.");
     }
+
+    @GetMapping("/")
+    public ResponseEntity<?> checkUp()
+    {
+        return ResponseEntity.ok("App - OK");
+    }
 }
