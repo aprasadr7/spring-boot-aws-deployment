@@ -1,11 +1,15 @@
-version: 0.1
+version: 0.2
 
 phases:
+  phases:
+    install:
+      runtime-versions:
+        java: corretto8
   build:
     commands:
       - mvn clean install
       - mvn spring-boot:run
-  post-build:
+  post_build:
     commands:
       - echo Build Completed
 artifacts:
