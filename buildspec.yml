@@ -8,7 +8,6 @@ phases:
   build:
     commands:
       - mvn clean install
-      - mvn spring-boot:run
     post_build:
       commands:
         - echo Build Completed
