@@ -1,0 +1,14 @@
+version: 0.1
+
+phases:
+  build:
+    commands:
+      - mvn clean install
+      - mvn spring-boot:run
+  post-build:
+    commands:
+      - echo Build Completed
+artifacts:
+  files:
+    - target/*jar
+  discard-paths: yes
