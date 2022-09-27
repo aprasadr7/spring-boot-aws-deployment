@@ -20,8 +20,8 @@ public class APIContorller {
     }
 
     @GetMapping("/")
-    public ResponseEntity<?> checkUp()
+    public ResponseEntity<?> home()
     {
-        return ResponseEntity.ok("App - OK");
+        return ResponseEntity.ok("App Home");
     }
 }
