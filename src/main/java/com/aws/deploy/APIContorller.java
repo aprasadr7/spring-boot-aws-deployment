@@ -35,7 +35,7 @@ public class APIContorller {
 
         ModelAndView model = new ModelAndView("index");
         String clientIp = getClientIp(request);
-        return ResponseEntity.ok("App Home :: " + clientIp);
+        return ResponseEntity.ok("Its working, you are in the App Home page :: " + clientIp);
     }
 
     public String getClientIp(HttpServletRequest request) {
