@@ -15,16 +15,18 @@ public class APIContorller {
 
     private final String LOCALHOST_IPV4 = "127.0.0.1";
     private final String LOCALHOST_IPV6 = "0:0:0:0:0:0:0:1";
-    @GetMapping("api/health")
-    public ResponseEntity<?> healthCheck()
+    @GetMapping("/health")
+    public ResponseEntity<?> healthCheck(HttpServletRequest request)
     {
-        return ResponseEntity.ok("OMG!!! Its working.");
+        String clientIp = getClientIp(request);
+        return ResponseEntity.ok("OMG!!! Its working :: " + clientIp);
     }
 
-    @GetMapping("api/check")
-    public ResponseEntity<?> checkUp()
+    @GetMapping("/check")
+    public ResponseEntity<?> checkUp(HttpServletRequest request)
     {
-        return ResponseEntity.ok("Up and Running.");
+        String clientIp = getClientIp(request);
+        return ResponseEntity.ok("Up and Running :: " + clientIp);
     }
 
     @GetMapping("/")
