@@ -35,7 +35,7 @@ public class APIContorller {
 
         ModelAndView model = new ModelAndView("index");
         String clientIp = getClientIp(request);
-        return ResponseEntity.ok("Its working :: " + clientIp);
+        return ResponseEntity.ok("Hello All, Im running in EC2 instance in AWS :: " + clientIp);
     }
 
     public String getClientIp(HttpServletRequest request) {
